@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
 import PostsIndex from './posts_index';
-import ReduxForm from './new_posts';
+import ReduxForm from './Project_Form';
 import Home from './home';
 
 import TableExampleStructured from './table';

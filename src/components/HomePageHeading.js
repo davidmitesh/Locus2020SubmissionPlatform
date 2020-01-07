@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react';
 import PostsIndex from './posts_index';
-import ReduxForm from './new_posts';
+import ReduxForm from './Project_Form';
 import Home from './home';
 
 import TableExampleStructured from './table';
@@ -87,7 +87,7 @@ const getWidth = () => {
                 <Route exact path='/'>
                     <HomePageContent />
                 </Route>
-                
+
                 <Route path='/projects'>
                     <TableExampleStructured/>
                 </Route>
