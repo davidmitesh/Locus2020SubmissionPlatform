@@ -9,7 +9,9 @@ class PostsIndex extends Component{
     }
     renderPosts() {
       return
-     ( <Segment inverted>
+     ( <Segment
+         // inverted
+         >
          <List divided inverted relaxed>
              _.map(this.props.posts, post => {
                  console.log('hey i am called')

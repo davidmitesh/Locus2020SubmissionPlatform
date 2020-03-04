@@ -21,8 +21,8 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Locus-2020 Project Submission Platform'
-      inverted
+      content='Assignment Submission Platform'
+      // inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
         fontWeight: 'normal',
@@ -33,7 +33,7 @@ const HomepageHeading = ({ mobile }) => (
     <Header
       as='h2'
       content='Got a project?'
-      inverted
+      // inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
         fontWeight: 'normal',

@@ -22,6 +22,7 @@ class SubForm extends React.Component {
     members: [{fname:"", lname:"",pnumber:''}]
   }
 handleChange = (e) => {
+    
     if (["fname", "lname",'pnumber'].includes(e.target.className) ) {
       let members = [...this.state.members]
       members[e.target.dataset.id][e.target.className] = e.target.value.toUpperCase()
@@ -35,7 +36,10 @@ addMember = (e) => {
       members: [...prevState.members, {fname:"", lname:"",pnumber:""}],
     }));
   }
-handleSubmit = (e) => { e.preventDefault() }
+handleSubmit = (e) => {
+    console.log(e)
+    e.preventDefault()
+}
 render() {
     let { members} = this.state
     return (
@@ -70,21 +74,22 @@ render() {
 
               {
                 members.map((val, idx)=> {
-                  let memId = `Member-${idx}`,fnameId='fname-${idx}',lnameId='lname-${idx}',pnumberId='pnumber-${idx}';
+                  let memId = `Member-${idx}`,fnameId=`fname-${idx}`,lnameId=`lname-${idx}`,pnumberId=`pnumber-${idx}`;
                   return (
                     <div key={idx}>
                         <h4>{`Member ${idx + 1}`}</h4>
                       {/* <label htmlFor={memId}>{`member #${idx + 1}`}</label> */}
                       {/* <div>Enter first name</div> */}
                       <Form.Group widths='equal'>
-                      <Form.Input
+                          <div>First Name</div>
+                      <input
                         type="text"
                         label="First Name"
                         placeholder="First Name"
                         name={fnameId}
                         data-id={idx}
                         id={fnameId}
-                        value={members[idx].fname}
+                        content={members[idx].fname}
                         className="fname"
                       />
                       <Form.Input
@@ -94,7 +99,7 @@ render() {
                         name={lnameId}
                         data-id={idx}
                         id={lnameId}
-                        value={members[idx].lname}
+                        content={members[idx].lname}
                         className="lname"
                       />
                       <Form.Input
@@ -104,7 +109,7 @@ render() {
                         name={pnumberId}
                         data-id={idx}
                         id={pnumberId}
-                        value={members[idx].pnumber}
+                        content={members[idx].pnumber}
                         className="pnumber"
                       />
 

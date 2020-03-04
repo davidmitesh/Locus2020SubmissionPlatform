@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react';
 import PostsIndex from './posts_index';
-import ReduxForm from './Project_Form';
+import ReduxForm from './New_Redux_Form';
 import Home from './home';
 
 import TableExampleStructured from './table';
@@ -46,14 +46,14 @@ const getWidth = () => {
           onBottomPassedReverse={this.hideFixedMenu}
         >
           <Segment
-            inverted
+            // inverted
             textAlign='center'
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
           >
             <Menu
               fixed={fixed ? 'top' : null}
-              inverted={!fixed}
+              // inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
               size='large'
@@ -73,10 +73,14 @@ const getWidth = () => {
                 </Menu.Item>
                 <Menu.Item as='a'>Past Projects</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
+                  <Button as='a'
+                  // inverted={!fixed}
+                  >
                     Log in
                   </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                  <Button as='a'
+                  // inverted={!fixed}
+                   primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
                 </Menu.Item>
@@ -130,7 +134,7 @@ class MobileContainer extends Component {
         <Sidebar
           as={Menu}
           animation='push'
-          inverted
+          // inverted
           onHide={this.handleSidebarHide}
           vertical
           visible={sidebarOpened}
@@ -147,21 +151,27 @@ class MobileContainer extends Component {
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
-            inverted
+            // inverted
             textAlign='center'
             style={{ minHeight: 350, padding: '1em 0em' }}
             vertical
           >
             <Container>
-              <Menu inverted pointing secondary size='large'>
+              <Menu
+              // inverted
+              pointing secondary size='large'>
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name='sidebar' />
                 </Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted>
+                  <Button as='a'
+                  // inverted
+                  >
                     Log in
                   </Button>
-                  <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
+                  <Button as='a'
+                  // inverted
+                  style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
                 </Menu.Item>

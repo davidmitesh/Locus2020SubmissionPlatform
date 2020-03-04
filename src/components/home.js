@@ -35,8 +35,8 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Locus-2020 Project Submission Platform'
-      inverted
+      content=' Assignment Submission Platform'
+      // inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
         fontWeight: 'normal',
@@ -47,7 +47,7 @@ const HomepageHeading = ({ mobile }) => (
     <Header
       as='h2'
       content='Got a project?'
-      inverted
+      // inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
         fontWeight: 'normal',
@@ -96,7 +96,7 @@ class DesktopContainer extends Component {
           >
             <Menu
               fixed={fixed ? 'top' : null}
-              inverted={!fixed}
+              // inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
               size='large'
@@ -116,10 +116,14 @@ class DesktopContainer extends Component {
                 </Menu.Item>
                 <Menu.Item as='a'>Past Projects</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
+                  <Button as='a'
+                  // inverted={!fixed}
+                  >
                     Log in
                   </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                  <Button as='a'
+                  // inverted={!fixed}
+                  primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
                 </Menu.Item>
@@ -159,7 +163,7 @@ class MobileContainer extends Component {
         <Sidebar
           as={Menu}
           animation='push'
-          inverted
+          // inverted
           onHide={this.handleSidebarHide}
           vertical
           visible={sidebarOpened}
@@ -176,21 +180,27 @@ class MobileContainer extends Component {
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
-            inverted
+            // inverted
             textAlign='center'
             style={{ minHeight: 350, padding: '1em 0em' }}
             vertical
           >
             <Container>
-              <Menu inverted pointing secondary size='large'>
+              <Menu
+               // inverted
+               pointing secondary size='large'>
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name='sidebar' />
                 </Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted>
+                  <Button as='a'
+                  // inverted
+                  >
                     Log in
                   </Button>
-                  <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
+                  <Button as='a'
+                  // inverted
+                  style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
                 </Menu.Item>

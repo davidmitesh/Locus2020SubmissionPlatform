@@ -12,11 +12,6 @@ export default class App extends Component {
 
         <Router>
         <ResponsiveContainer/>
-
-
-
-
-
         </Router>
     );
   }
